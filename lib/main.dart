@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_maps/src/views/home_screen.dart';
+import 'package:google_maps/src/views/google_map_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,13 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Google Maps',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        primaryColor: Colors.blue,
+        useMaterial3: false,
       ),
-      home: const HomeScreen(),
+      home: const GoogleMapScreen(),
     );
   }
 }
