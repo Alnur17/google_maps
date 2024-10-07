@@ -13,8 +13,8 @@ class _GoogleMapScreenDynamicRouteState extends State<GoogleMapScreenDynamicRout
   GoogleMapController? mapController;
   LatLng? _initialPosition;
   LatLng? _destination;
-  Set<Marker> _markers = {};
-  Set<Polyline> _polylines = {};
+  final Set<Marker> _markers = {};
+  final Set<Polyline> _polyline = {};
 
   @override
   void initState() {
@@ -56,7 +56,7 @@ class _GoogleMapScreenDynamicRouteState extends State<GoogleMapScreenDynamicRout
       final directions = await DirectionsService().getDirections(_initialPosition!, _destination!);
 
       setState(() {
-        _polylines.add(Polyline(
+        _polyline.add(Polyline(
           polylineId: const PolylineId('route'),
           points: directions, // Set decoded points as polyline points
           color: Colors.blue,
@@ -79,7 +79,7 @@ class _GoogleMapScreenDynamicRouteState extends State<GoogleMapScreenDynamicRout
           zoom: 11.0,
         ),
         markers: _markers,
-        polylines: _polylines, // Add the polyline
+        polylines: _polyline, // Add the polyline
         onTap: _onMapTapped, // Listen for map taps
       ),
     );
