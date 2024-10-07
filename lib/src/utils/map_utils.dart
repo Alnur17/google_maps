@@ -6,15 +6,22 @@ Set<Marker> getMarkers() {
   List<MarkerModel> markerData = [
     MarkerModel(
       id: 'marker1',
-      position: const LatLng(37.77483, -122.41942),
-      title: 'San Francisco',
-      snippet: 'A beautiful city',
+      position: const LatLng(23.843473652661974, 90.40292519999998),
+      title: 'Hazrat Shahjalal International Airport',
+      snippet: 'হযরত শাহ্জালাল আন্তর্জাতিক বিমানবন্দর, ঢাকা',
     ),
     MarkerModel(
       id: 'marker2',
-      position: const LatLng(34.05223, -118.24368),
-      title: 'Los Angeles',
-      snippet: 'Hollywood city',
+      position: const LatLng(23.733193700000093, 90.38376640000013),
+      title: 'Dhaka New Market',
+      snippet:
+          'Completed in 1954, this busy market complex \nhas a central triangular lawn & space for 440 shops.',
+    ),
+    MarkerModel(
+      id: 'marker3',
+      position: const LatLng(23.868025377350026, 90.30901388782178),
+      title: 'BRAC University Residential Campus',
+      snippet: 'ব্রাক ইউনির্ভাসিটি রেসিডেনসিয়াল ক্যাম্পাস',
     ),
   ];
 
